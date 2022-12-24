@@ -1,0 +1,12 @@
+:root {
+    --green: #499A18;
+    --orange: #E06733;
+    --grey: #636060;
+    --light-grey: #717171;
+    --black: #010201;
+  }
+
+.body {
+    font-family: "Inika", "Inter", Arial, sans-serif;
+    background-color: #EDF2EC;
+}
