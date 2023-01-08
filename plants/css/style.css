@@ -1,10 +1,55 @@
 :root {
-    --green: #499A18;
-    --orange: #E06733;
-    --grey: #636060;
-    --light-grey: #717171;
-    --black: #010201;
-  }
+  --green-var: #499A18;
+  --orange-var: #E06733;
+  --grey-var: #636060;
+  --light-grey-var: #717171;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+  background-color: #EDF2EC;
+}
+
+.wrapper-full{
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  width:1222px;
+  margin: 0 auto;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  padding-bottom: 62px;
+}
+
 
 .body {
     font-family: "Inika", "Inter", Arial, sans-serif;
