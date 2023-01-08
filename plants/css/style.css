@@ -50,6 +50,52 @@ body {
   padding-bottom: 62px;
 }
 
+.header__logo-link {
+  font-family: 'Inika';
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  line-height: 50px;
+}
+
+.header__logo-image {
+  height: 20px;
+  width: 20px;
+}
+
+.header__nav {
+  height: 50px;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.header__nav-list-item {
+  margin-right: 46px;
+}
+
+.header__nav-list-item:last-child {
+  margin-right: 0px;
+}
+
+.header__nav-list-item-link {
+  font-family: 'Inika';
+  font-size: 16px;
+  line-height: 50px;
+  color: #010201;
+  text-decoration: none;
+}
+
+.header__nav-list-item-link:hover, .header__nav-list-item-link:focus, .header__nav-list-item-link:active {
+  color: var(--orange-var);
+  cursor: pointer;
+  transition: 0.5s;
+}
 
 .body {
     font-family: "Inika", "Inter", Arial, sans-serif;
