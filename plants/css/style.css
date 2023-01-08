@@ -218,4 +218,114 @@ body {
 }
 
 /*about end*/
+/*main service start*/
+.service {
+  background-color: #EDF2EC;
+  padding-top: 40px;
+  padding-bottom: 121px;
+}
+
+.service__content {
+  max-width: 1007px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.service__content-title {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green-var);
+  max-width: 306px;
+}
+
+.service__content__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service__button {
+  width: 161px;
+  height: 50px;
+  display: block;
+  background: none;
+  text-align: center;
+  padding: 12px 0;
+  border:1px solid var(--orange-var);
+  border-radius: 5px;
+  font-family: 'Inika';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--orange-var);
+  text-decoration: none;
+  margin-right: 37px;
+}
+
+.service__button:hover, .service__button:active, .service__button:focus{
+  background-color: var(--orange-var);
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.service__button:last-child {
+  margin-right: 0px;
+}
+
+.service__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 116px;
+  row-gap: 55px;
+}
+
+.service__card-info {
+  width: 330px;
+  height: 100px;
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.service__card-image{
+  width: 330px;
+  height: 350px;
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.service__card-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--orange-var);
+  text-align: center;
+  margin: 10px 0;
+}
+
+.service__card-desription {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--light-grey-var);
+  text-align: center;
+}
+
+.blur {
+  filter: blur(1.5px);
+}
+
+/*main service end */
+
 }
