@@ -173,4 +173,49 @@ body {
 }
 
 /* main welcome end*/
+/*main about*/
+
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 93px;
+  padding-bottom: 94px;
+  background-color: #fff;
+}
+
+.about__content-wrapper {
+  background: none;
+}
+
+.about__title {
+  max-width: 463px;
+  font-family: 'Inika';
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color:var(--green-var);
+  padding-bottom: 40px;
+}
+
+.about__title span{
+  color: var(--orange-var);
+}
+
+.about__text{
+  max-width: 605px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--grey-var);
+}
+
+.about__image {
+  width: 464px;
+  height: 479px;
+  margin-bottom: -4px;
+}
+
+/*about end*/
 }
