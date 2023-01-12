@@ -73,10 +73,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  list-style: none;
 }
 
 .header__nav-list-item {
   margin-right: 46px;
+  text-decoration: none;
 }
 
 .header__nav-list-item:last-child {
@@ -808,6 +810,7 @@ body {
   justify-content: space-between;
   column-gap: 20px;
   padding: 9px 0;
+  list-style: none;
 }
 
 .social-media-container-item {

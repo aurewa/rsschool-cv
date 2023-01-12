@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
             service_cards.forEach(card => {
                 card.classList.remove("blur");
 
-                let cardTag = card.getAttribute('tag');
-                let btnTag = element.getAttribute('name');
+                let btnId = element.getAttribute('id');
 
-                if (cardTag !== btnTag){
+                if (card.classList.contains(btnId)){
                     card.classList.add("blur");
                 }
             });     
@@ -23,10 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let price_list_items_content = Array.from(document.getElementsByClassName('price__list-item-content'));
             price_list_items_content.forEach(content_item => {
 
-                let contentTag = content_item.getAttribute('tag');
-                let btnName = item.getAttribute('name');
+                let btnId = item.getAttribute('id');
 
-                if (contentTag === btnName){
+                if (content_item.classList.contains(btnId)){
                     if (content_item.classList.contains("hidden")){
                         content_item.classList.remove("hidden");
                     }else{
@@ -79,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     this.setAttribute("class", "same-as-selected");
-                    showCard(original_select_element.selectedIndex);
+                    showCard(original_select_element.options[i].id);
                     break;
                 }
             }
@@ -102,15 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showCard(elementIndex){
 
-        var cards = Array.from(document.getElementsByClassName("city__card"));
+       var cards = Array.from(document.getElementsByClassName("city__card"));
        cards.forEach(card => {
-            let cardTag = parseInt(card.getAttribute('tag'));
-            if (cardTag !== elementIndex){
+            if (card.classList.contains(elementIndex)){
+                card.classList.remove("hidden");
+            }else{
                 if (!card.classList.contains("hidden")){
                     card.classList.add("hidden");
                 }
-            }else{
-                card.classList.remove("hidden");
             }
        });
     }

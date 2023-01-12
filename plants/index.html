@@ -7,6 +7,7 @@
     <title>Plants</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inika">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="icon" href="assets/ico/logo_plants.ico">
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/script.js"></script>
 </head>
@@ -22,23 +23,23 @@
                     </div>
         
                     <nav class="header__nav">
-                        <div class="header__nav-list">
+                        <ul class="header__nav-list">
                             <li class="header__nav-list-item">
-                                <a href="#welcome" class="header__nav-list-item-link">Home</a></li>
+                                <a href="#welcome" class="header__nav-list-item-link">Home</a>
                             </li>
                             <li class="header__nav-list-item">
-                                <a href="#about" class="header__nav-list-item-link">About us</a></li>
+                                <a href="#about" class="header__nav-list-item-link">About us</a>
                             </li>
                             <li class="header__nav-list-item">
-                                <a href="#service" class="header__nav-list-item-link">Service</a></li>
+                                <a href="#service" class="header__nav-list-item-link">Service</a>
                             </li>
                             <li class="header__nav-list-item">
-                                <a href="#prices" class="header__nav-list-item-link">Price</a></li>
+                                <a href="#prices" class="header__nav-list-item-link">Price</a>
                             </li>
                             <li class="header__nav-list-item">
-                                <a href="#contacts" class="header__nav-list-item-link">Contacts</a></li>
+                                <a href="#contacts" class="header__nav-list-item-link">Contacts</a>
                             </li>
-                        </div>
+                       </ul>
                     </nav>
                 </div>
             </div>
@@ -90,48 +91,48 @@
                     <div class="service__content">
                         <h2 class="service__content-title">Service and our projects</h2>
                         <div class="service__content__buttons">
-                            <a href="#!" class="service__button" name="garden_care">Gardens</a>
-                            <a href="#!" class="service__button" name="lawn_care">Lawn</a>
-                            <a href="#!" class="service__button" name="planting">Planting</a>
+                            <a href="#!" class="service__button" id="garden_care">Gardens</a>
+                            <a href="#!" class="service__button" id="lawn_care">Lawn</a>
+                            <a href="#!" class="service__button" id="planting">Planting</a>
                         </div>                        
                     </div>
                     <div class="service__cards">
-                        <div class="service__card" tag="garden_care">
+                        <div class="service__card garden_care">
                             <img src="assets/png/service_1_1.png" alt="Garden care" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Garder care</h3>
                                 <p class="service__card-desription">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
-                        <div class="service__card" tag="planting">
+                        <div class="service__card planting">
                             <img src="assets/png/service_1_2.png" alt="Planting" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Planting</h3>
                                 <p class="service__card-desription">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
-                        <div class="service__card" tag="lawn_care">
+                        <div class="service__card lawn_care">
                             <img src="assets/png/service_1_3.png" alt="Lawn care" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Lawn care</h3>
                                 <p class="service__card-desription">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
-                        <div class="service__card" tag="planting">
+                        <div class="service__card planting">
                             <img src="assets/png/service_2_1.png" alt="Planting" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Planting</h3>
                                 <p class="service__card-desription">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
-                        <div class="service__card" tag="garden_care">
+                        <div class="service__card garden_care">
                             <img src="assets/png/service_2_2.png" alt="Garden care" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Garden care</h3>
                                 <p class="service__card-desription">Lorem Ipsum has been the industry</p>
                             </div>
                         </div>
-                        <div class="service__card" tag="planting">
+                        <div class="service__card planting">
                             <img src="assets/png/service_2_3.png" alt="Planting" class="service__card-image">
                             <div class="service__card-info">
                                 <h3 class="service__card-title">Planting</h3>
@@ -154,12 +155,12 @@
                                     <li class="price__list-item">
                                         <div class="price__list-item-header-container">
                                             <h3 class="price__list-item-header">Basics</h3>
-                                            <a href="#!" class="price__list-item-header-btn" name="basics">
+                                            <a href="#!" class="price__list-item-header-btn" id="basics">
                                                 <img src="./assets/svg/accordion_btn_regular.svg" alt="Expand button" class="price__list-item-header-image">
                                             </a>
 
-                                            <div class="price__list-item-content hidden" tag="basics">
-                                                <border class="price__info__separator"></border>
+                                            <div class="price__list-item-content hidden basics">
+                                                <hr class="price__info__separator">
                                                 <p class="price__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                                 <p class="price__text__info"><span class="price__text">$<span class="price__text__digits">15</span></span>&nbsp;&nbsp;/&nbsp;per hour</p>
                                                 <a href="#!" class="order__button">Order</a>                                              
@@ -169,12 +170,12 @@
                                     <li class="price__list-item">
                                         <div class="price__list-item-header-container">
                                             <h3 class="price__list-item-header">Standard</h3>
-                                            <a href="#!" class="price__list-item-header-btn" name="standard">
+                                            <a href="#!" class="price__list-item-header-btn" id="standard">
                                                 <img src="./assets/svg/accordion_btn_regular.svg" alt="Expand button" class="price__list-item-header-image">
                                             </a>
 
-                                            <div class="price__list-item-content hidden" tag="standard">
-                                                <border class="price__info__separator"></border>
+                                            <div class="price__list-item-content hidden standard">
+                                                <hr class="price__info__separator">
                                                 <p class="price__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                                 <p class="price__text__info"><span class="price__text">$<span class="price__text__digits">25</span></span>&nbsp;&nbsp;/&nbsp;per hour</p>
                                                 <a href="#!" class="order__button">Order</a>                                              
@@ -184,12 +185,12 @@
                                     <li class="price__list-item">
                                         <div class="price__list-item-header-container">
                                             <h3 class="price__list-item-header">Pro care</h3>
-                                            <a href="#!" class="price__list-item-header-btn" name="pro_care">
+                                            <a href="#!" class="price__list-item-header-btn" id="pro_care">
                                                 <img src="./assets/svg/accordion_btn_regular.svg" alt="Expand button" class="price__list-item-header-image">
                                             </a>
 
-                                            <div class="price__list-item-content hidden" tag="pro_care">
-                                                <border class="price__info__separator"></border>
+                                            <div class="price__list-item-content pro_care hidden">
+                                                <hr class="price__info__separator">
                                                 <p class="price__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                                 <p class="price__text__info"><span class="price__text">$<span class="price__text__digits">35</span></span>&nbsp;&nbsp;/&nbsp;per hour</p>
                                                 <a href="#!" class="order__button">Order</a>                                              
@@ -223,15 +224,15 @@
                                     
                                     <div class="custom-select">
                                         <select>
-                                            <option value="0">City</option>
-                                            <option value="1">Canandaigua, NY</option>
-                                            <option value="2">New York City</option>
-                                            <option value="3">Yonkers, NY</option>
-                                            <option value="4">Sherrill, NY</option>
+                                            <option value="0" id="zero">City</option>
+                                            <option value="1" id="one">Canandaigua, NY</option>
+                                            <option value="2" id="two">New York City</option>
+                                            <option value="3" id="three">Yonkers, NY</option>
+                                            <option value="4" id="four">Sherrill, NY</option>
                                         </select>
                                     </div>
 
-                                    <div class="city__card hidden" tag="1">
+                                    <div class="city__card hidden one">
                                         <div class="card__row">
                                             <div class="card__row_column1">City:</div>
                                             <div class="card__row_column2">Canandaigua, NY</div>
@@ -248,7 +249,7 @@
                                         <a href="#!" class="call__us-button">Call us</a>
                                     </div>
 
-                                    <div class="city__card hidden" tag="2">
+                                    <div class="city__card hidden two">
                                         <div class="card__row">
                                             <div class="card__row_column1">City:</div>
                                             <div class="card__row_column2">New York City</div>
@@ -265,7 +266,7 @@
                                         <a href="#!" class="call__us-button">Call us</a>
                                     </div>
 
-                                    <div class="city__card hidden" tag="3">
+                                    <div class="city__card hidden three">
                                         <div class="card__row">
                                             <div class="card__row_column1">City:</div>
                                             <div class="card__row_column2">Yonkers, NY</div>
@@ -282,7 +283,7 @@
                                         <a href="#!" class="call__us-button">Call us</a>
                                     </div>
 
-                                    <div class="city__card hidden" tag="4">
+                                    <div class="city__card hidden four">
                                         <div class="card__row">
                                             <div class="card__row_column1">City:</div>
                                             <div class="card__row_column2">Sherrill, NY</div>
