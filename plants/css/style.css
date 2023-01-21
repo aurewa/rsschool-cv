@@ -967,6 +967,56 @@ body {
   }
   /* about media end--------------------------------------------------------------------------------------------------------*/
 
+  /* service media start------------------------------------------------------------------------------------------------------*/
+
+  .service {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+  
+  .service__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service__content-title {
+    font-size: 35px;
+    line-height: 46px;
+    max-width: 306px;
+    padding-bottom: 40px;
+  }
+  
+  .service__content__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .service__button {
+    margin-right: 38px;
+  }
+    
+  .service__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 106px;
+    row-gap: 38px;
+  }
+  
+  .service__card-info {
+    width: 280px;
+    height: 100px;
+  }
+  
+  .service__card-image{
+    width: 280px;
+    height: 350px;
+  }
+ 
+
+  /* service media end--------------------------------------------------------------------------------------------------------*/
+
 
   /* footer media start--------------------------------------------------------------------------------------------------------*/
   
@@ -1126,6 +1176,65 @@ body {
     margin-bottom: -4px;
   }
   /* about media end--------------------------------------------------------------------------------------------------------*/
+
+  /* service media start------------------------------------------------------------------------------------------------------*/
+
+  .service {
+    padding-top: 30px;
+    padding-bottom: 27px;
+  }
+  
+  .service__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+  
+  .service__content-title {
+    font-size: 25px;
+    line-height: 33px;
+    max-width: 187px;
+    padding-bottom: 35px;
+  }
+  
+  .service__content__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 270px;
+    padding-bottom: 40px;
+    row-gap: 9px;
+  }
+  
+  .service__button {
+    width: 121px;
+    height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 7px 0;
+  }
+    
+  .service__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 34px;
+  }
+  
+  .service__card-info {
+    width: 279px;
+    height: 100px;
+  }
+  
+  .service__card-image{
+    width: 279px;
+    height: 350px;
+  }
+    
+  /* service media end--------------------------------------------------------------------------------------------------------*/
 
 
   /* ----------------------------------------------------------------------------------------------------------------------------*/
