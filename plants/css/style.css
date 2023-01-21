@@ -1070,6 +1070,57 @@ body {
   }
 
   /* price media end----------------------------------------------------------------------------------------------------------*/
+  
+  /* contacts media 768px start--------------------------------------------------------------------------------------------------------*/
+
+  .contacts {
+    padding-top: 40px;
+  }
+  
+  .contacts__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0;
+  }
+  
+  .contacts__container-column1 {
+    background: none;
+  }
+  
+  .contacts__container-column2 {
+    background: none;
+  }
+  
+  .contacts__image {
+    width: 200px;
+    height: auto;
+    margin-bottom: -4px;
+  }
+  
+  .contacts__information__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+  }
+  
+  .contacts__information__header {  
+    font-size: 40px;
+    line-height: 52px;
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+
+  .custom-select {
+    margin-bottom: 250px;
+    margin-top:0;
+  }
+
+  /* contacts media 768px end----------------------------------------------------------------------------------------------------------*/
 
 
   /* footer media start--------------------------------------------------------------------------------------------------------*/
@@ -1354,9 +1405,35 @@ body {
 
   /* price media end----------------------------------------------------------------------------------------------------------*/
 
+/* contacts media 380px start--------------------------------------------------------------------------------------------------------*/
 
-  /* ----------------------------------------------------------------------------------------------------------------------------*/
-  /* footer media start */
+.contacts {
+  padding-top: 25px;
+}
+
+.contacts__image {
+  width: 100px;
+  height: auto;
+  margin-bottom: -4px;
+}
+
+.contacts__information__header {  
+  font-size: 25px;
+  line-height: 33px;
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.custom-select {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 132px;
+  margin-top:0;
+}
+
+/* contacts media 380px end----------------------------------------------------------------------------------------------------------*/
+
+/* footer media start ----------------------------------------------------------------------------------------------------------*/
   
   .footer__container{
     flex-direction: column;
