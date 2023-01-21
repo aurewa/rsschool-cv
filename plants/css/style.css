@@ -1126,10 +1126,27 @@ body {
   /* footer media start--------------------------------------------------------------------------------------------------------*/
   
   .footer__container{
-    justify-content: center;
-    padding: 0 33px 0 18px;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px 0 18px 0;
   }
 
+  .footer__container-link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .footer__container-column1 {
+    margin-bottom: 16px;
+  }
+  
+  .footer__container-column2 {
+    margin-bottom: 16px;
+  }
+
+  .footer__container-column3 {
+    margin-left: 0;
+  }
   /* footer media end--------------------------------------------------------------------------------------------------------*/
 }
 
@@ -1433,23 +1450,30 @@ body {
 
 /* contacts media 380px end----------------------------------------------------------------------------------------------------------*/
 
-/* footer media start ----------------------------------------------------------------------------------------------------------*/
-  
-  .footer__container{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 0 7px 0;
-    background-color: #D6E7D2;
-  }
+/* footer media 380px start ---------------------------------------------------------------------------------------------------------*/
+.footer__container{
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 0 7px 0;
+}
 
-  .footer__container-link {
-    /* TODO*/
-    background: red;
-  }
+.footer__container-link {
+  font-size: 20px;
+  line-height: 24px;
+}
 
-  /* footer media end */
-    /* ----------------------------------------------------------------------------------------------------------------------------*/
+.footer__container-column1 {
+  margin-bottom: 16px;
+}
+
+.footer__container-column2 {
+  margin-bottom: 3px;
+}
+
+.footer__container-column3 {
+  margin-left: 0;
+}
+/* footer media 380px end ------------------------------------------------------------------------------------------------------------*/
 }
 
 /* Media end*/
