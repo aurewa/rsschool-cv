@@ -72,6 +72,7 @@ body {
   height: 50px;
   margin-top: 42px;
   margin-bottom: 42px;
+  transition: .2s all linear;
 }
 
 .header__nav-list {
@@ -106,10 +107,10 @@ body {
 
 .header__burger {
   width: 40px;
-  height: 24px;
+  height: 26px;
   position: relative;
   display: none;
-  transition: .2s;
+  transition: 2s all linear;
 }
 
 .burger__line {
@@ -880,7 +881,7 @@ body {
 
 /* 768px */
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1300px) {
 
   .container {
     padding: 0 50px;
@@ -1200,7 +1201,7 @@ body {
 }
 
 /* 380px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 720px) {
 
   .container {
     padding: 0 25px;
@@ -1212,9 +1213,8 @@ body {
   }
 
   .header__logo{
-    line-height: 25px;
+    line-height: 21px;
     margin-top: 36px;
-    margin-bottom: 36px;
   }
 
   .header__burger {
@@ -1281,7 +1281,7 @@ body {
   /* welcome media start--------------------------------------------------------------------------------------------------------*/
 
   .welcome {
-    padding: 24px 0;
+    padding: 25px 0;
   }
   .welcome__content_wrapper {
     margin: 0;
@@ -1296,13 +1296,16 @@ body {
     padding-bottom: 20px;
     font-size: 25px;
     line-height: 35px;
+    letter-spacing: 0.4px;
   }
    
   .welcome__text {
     max-width: 314px;
-    padding-bottom: 20px;
     font-size: 16px;
     line-height: 25px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-bottom: 7px;
   }
   
   .welcome__more-button {
@@ -1322,20 +1325,22 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 31px;
+    padding-top: 29px;
+    padding-bottom: 27px;
   }
   
   .about__title {
     max-width: 288px;
     font-size: 25px;
     line-height: 33px;
-    padding-bottom: 21.5px;
+    padding-bottom: 0px;
+    margin-bottom: 13px;
   }
    
   .about__text{
     max-width: 330px;
     padding-bottom: 0;
+    margin-bottom: 0;
     font-size: 15px;
     line-height: 25px;
   }
@@ -1343,7 +1348,6 @@ body {
   .about__image {
     width: 150px;
     height: auto;
-    margin-bottom: -4px;
   }
   /* about media end--------------------------------------------------------------------------------------------------------*/
 
@@ -1364,7 +1368,7 @@ body {
     font-size: 25px;
     line-height: 33px;
     max-width: 187px;
-    padding-bottom: 35px;
+    padding-bottom: 38px;
   }
   
   .service__content__buttons {
@@ -1427,24 +1431,34 @@ body {
   .price-header {
     font-size: 25px;
     line-height: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     text-align: center;
+    padding-left: 0;
+    padding-bottom: 0;
   }
   
   .price__list__container {
-    padding: 29px 22px;
+    padding: 29px 22px 27px 20px;
     margin-bottom: 19px;
   }
   
   .price__list{
-    row-gap: 14px;
+    row-gap: 11px;
   }
   
   .price__list-item {
     width: 180px;
-    padding: 16px 30px;
-
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 31px;
+    padding-right: 40px;
+    letter-spacing: 0.5px;
   }
+
+  .price__list-item-header{
+    font-size: 15px;
+    line-height: 20px;
+  } 
 
   .contact__us{
     align-items: center;
@@ -1457,6 +1471,7 @@ body {
     line-height: 35px;
     max-width: 230px;
     margin-bottom: 14px;
+    padding-bottom: 7px;
   }
   
   .contact__us-button {
@@ -1476,7 +1491,7 @@ body {
 
 /* contacts media 380px start--------------------------------------------------------------------------------------------------------*/
 
-/* .contacts {
+.contacts {
   padding-top: 25px;
 }
 
@@ -1484,6 +1499,7 @@ body {
   width: 100px;
   height: auto;
   margin-bottom: -4px;
+  margin-left: 0;
 }
 
 .contacts__information__header {  
@@ -1498,7 +1514,16 @@ body {
   height: 50px;
   margin-bottom: 132px;
   margin-top:0;
-} */
+  margin-left: -5px;
+}
+
+.select-selected:after {
+  content: url(../assets/svg/contacts_select_regular.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+}
 
 /* contacts media 380px end----------------------------------------------------------------------------------------------------------*/
 
@@ -1526,6 +1551,13 @@ body {
   margin-left: 0;
 }
 /* footer media 380px end ------------------------------------------------------------------------------------------------------------*/
+}
+
+/* 380px */
+@media screen and (max-width: 360px) {
+  .custom-select {
+    width: 200px;
+  }
 }
 
 /* Media end*/
