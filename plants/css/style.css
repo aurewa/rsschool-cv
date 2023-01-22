@@ -898,6 +898,10 @@ body {
     margin-bottom: 35px;
   }
 
+  .header__logo-image {
+    margin-left: 0;
+  }
+
   /* welcome media start--------------------------------------------------------------------------------------------------------*/
 
   .welcome__content{
@@ -915,6 +919,10 @@ body {
     margin-right: 47px;
   }
  
+  .welcome__content_wrapper:last-child {
+    margin-top: 0px;
+  }
+
   .welcome__content_wrapper:first-child {
     margin-right: 0px;
   }
@@ -936,7 +944,8 @@ body {
     max-width: 340px;
     font-size: 16px;
     line-height: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+    padding-left: 5px;
   }
   
   .welcome__more-button {
@@ -963,19 +972,26 @@ body {
   
   .about__title {
     max-width: 423px;
+    
     font-size: 35px;
     line-height: 46px;
-    padding-bottom: 40px;
+    text-align: center;
+    padding-top: 0px;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 11px;
+    margin-bottom: 40px;
   }
    
   .about__text{
     max-width: 668px;
-    padding-bottom: 40px;
+    padding-bottom: 28px;
+    margin-bottom: 40px;
   }
   
   .about__image {
     width: 250px;
-    height: auto;
+    height: 258px;
     margin-bottom: -4px;
   }
   /* about media end--------------------------------------------------------------------------------------------------------*/
@@ -990,13 +1006,14 @@ body {
   .service__content {
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 40px;
   }
   
   .service__content-title {
     font-size: 35px;
     line-height: 46px;
     max-width: 306px;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
   }
   
   .service__content__buttons {
@@ -1026,6 +1043,17 @@ body {
     width: 280px;
     height: 350px;
   }
+
+  .service__card-desription{
+    max-width: 201px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .service__card-title{
+    margin: 10px 0;
+  }
  
 
   /* service media end--------------------------------------------------------------------------------------------------------*/
@@ -1041,6 +1069,9 @@ body {
     font-size: 35px;
     line-height: 42px;
     margin-bottom: 50px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 7px;
   }
   
   .price__list__container {
@@ -1058,14 +1089,16 @@ body {
   }
 
   .contact__us{
-    margin-top: 99px;
+    margin-top: 100px;
   }
  
   .contact__us-header {
     font-size: 25px;
     line-height: 35px;
     max-width: 296px;
-    margin-bottom: 21.5px;
+    padding-bottom: 8px;
+    margin-bottom: 21px;
+    letter-spacing: 0.3px;
   }
   
   .contact__us-button {
@@ -1109,8 +1142,9 @@ body {
   
   .contacts__image {
     width: 200px;
-    height: auto;
+    height: 248.5px;
     margin-bottom: -4px;
+    margin-left: 20px;
   }
   
   .contacts__information__container {
@@ -1141,12 +1175,13 @@ body {
   .footer__container{
     flex-direction: column;
     align-items: center;
-    padding: 33px 0 18px 0;
+    padding: 30px 0 18px 0;
   }
 
   .footer__container-link {
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: 0.1px;
   }
 
   .footer__container-column1 {
@@ -1154,7 +1189,8 @@ body {
   }
   
   .footer__container-column2 {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+    margin-left: 0px;
   }
 
   .footer__container-column3 {
@@ -1366,6 +1402,10 @@ body {
   .service__card-image{
     width: 279px;
     height: 350px;
+  }
+
+  .service__card-title {
+    margin: 10px 0;
   }
     
   /* service media end--------------------------------------------------------------------------------------------------------*/
