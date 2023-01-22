@@ -39,7 +39,6 @@ body {
 .container {
   max-width: 1222px;
   margin: 0 auto;
-  padding: 0 50px;
 }
 
 /* header start */
@@ -51,14 +50,14 @@ body {
 }
 
 .header__logo{
-  margin-top: 42px;
-  margin-bottom: 42px;
-  line-height: 50px;
+  margin-top: 45px;
+  margin-bottom: 51px;
 }
 
 .header__logo-link {
   font-family: 'Inika';
   font-size: 16px;
+  line-height: 21px;
   color: #000;
   text-decoration: none;
 }
@@ -66,6 +65,7 @@ body {
 .header__logo-image {
   height: 20px;
   width: 20px;
+  margin-left: 3px;
 }
 
 .header__nav {
@@ -82,7 +82,7 @@ body {
 }
 
 .header__nav-list-item {
-  margin-right: 46px;
+  margin-right: 47px;
   text-decoration: none;
 }
 
@@ -147,21 +147,22 @@ body {
 
 .welcome {
   background-color: #EDF2EC;
-  padding: 0 62px;
+  padding: 62px 0;
 }
 
 .welcome__content{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .welcome__content_wrapper{
-  margin-right: 224px;
+  margin-right: 225px;
 }
 
 .welcome__content_wrapper:last-child {
   margin-right: 0px;
+  margin-top: 36px;
 }
 
 .welcome__content-image {
@@ -176,6 +177,7 @@ body {
   font-family: 'Inter';
   font-weight: 700;
   font-size: 45px;
+  letter-spacing: 0.7px;
   line-height: 50px;
   color: var(--light-grey-var);
 }
@@ -225,7 +227,7 @@ body {
 .about__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 93px;
   padding-bottom: 94px;
   background-color: #fff;
@@ -242,6 +244,7 @@ body {
   font-size: 40px;
   line-height: 52px;
   color:var(--green-var);
+  padding-top: 68px;
   padding-bottom: 40px;
 }
 
@@ -357,7 +360,7 @@ body {
   line-height: 20px;
   color: var(--orange-var);
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 13px 0;
 }
 
 .service__card-desription {
@@ -400,8 +403,10 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
+  text-align: left;
   color:#000;
   max-width: 452px;
+  letter-spacing: 0.5px;
 }
 
 .contact__us-header {
@@ -453,6 +458,8 @@ body {
 
 .price-header {
   margin-bottom: 60px;
+  line-height: 48px;
+  letter-spacing: 1px;
 }
 
 .price__list__container {
@@ -872,7 +879,13 @@ body {
 /* Media start*/
 
 /* 768px */
+
 @media screen and (max-width: 1439px) {
+
+  .container {
+    padding: 0 50px;
+  }
+
   .header__logo{
     line-height: 47px;
     margin-top: 35px;
@@ -1183,7 +1196,6 @@ body {
     z-index: 10;
     padding: 30px 50px;
     transform: translateX(100%);
-    /* transition: 0.2s all linear; */
   }
 
   .header__nav__visible {
@@ -1218,7 +1230,7 @@ body {
     background-color: var(--light-grey-var);
   }
 
-  .header__nav__close:hover .header__nav__close-line { /* this works */
+  .header__nav__close:hover .header__nav__close-line {
     background-color: var(--orange-var);
   }
 
@@ -1424,7 +1436,7 @@ body {
 
 /* contacts media 380px start--------------------------------------------------------------------------------------------------------*/
 
-.contacts {
+/* .contacts {
   padding-top: 25px;
 }
 
@@ -1446,7 +1458,7 @@ body {
   height: 50px;
   margin-bottom: 132px;
   margin-top:0;
-}
+} */
 
 /* contacts media 380px end----------------------------------------------------------------------------------------------------------*/
 
