@@ -135,4 +135,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     document.addEventListener("click", closeAllSelect);
+
+    (function () {
+        const burger_element = document.querySelector(".burger");
+        const burger_close_element = document.querySelector(".header__nav__close");
+
+        burger_element.addEventListener('click', ()=> {
+            document.querySelector(".header__nav").classList.add("header__nav__visible");
+        });
+
+        burger_close_element.addEventListener('click', ()=> {
+            document.querySelector(".header__nav").classList.remove("header__nav__visible");
+        });
+              
+        document.querySelectorAll(".header__nav-list-item").forEach(e=>{
+            e.addEventListener('click', ()=> {
+                document.querySelector(".header__nav").classList.remove("header__nav__visible");
+            });
+        });
+
+    }());
+
+
+    const part1 = "1.Вёрстка соответствует макету. Ширина экрана 768px +24 \n";
+    const part2 = "2.Вёрстка соответствует макету. Ширина экрана 380px +24 \n";
+    const part3 = "3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15 \n";
+    const part4 = "4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22.  (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)  \n";
+    const part5 = "Оценка за задание 75 баллов  \n";
+
+    console.log(part1 + part2 + part3 + part4 + part5);
 });
