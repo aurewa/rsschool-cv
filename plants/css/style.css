@@ -27,6 +27,10 @@ body {
     padding: 0;
 }
 
+a:hover {
+  cursor:pointer;
+ }
+
 .header {
   background-color: #EDF2EC;
 }
@@ -217,7 +221,6 @@ body {
 .welcome__more-button:hover {
   background-color: var(--orange-var);
   color: #fff;
-  cursor: pointer;
   transition: 1s;
 }
 
@@ -321,11 +324,30 @@ body {
   margin-right: 37px;
 }
 
-.service__button:hover, .service__button:active, .service__button:focus{
+.service__button:hover{
   background-color: var(--orange-var);
   color: #fff;
-  cursor: pointer;
   transition: 1s;
+}
+
+.service__button__active {
+  background-color: var(--orange-var);
+  color: #fff;
+  transition: 1s;
+}
+
+.service__button__disabled {
+  border-color: #999;
+  background-color: #999;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.service__button__disabled:hover{
+  border-color: #999;
+  background-color: #999;
+  color: #fff;
+  cursor: not-allowed;
 }
 
 .service__button:last-child {
@@ -377,6 +399,7 @@ body {
 
 .blur {
   filter: blur(1.5px);
+  transition: 1s;
 }
 
 /*main service end */

@@ -1,21 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    let service_buttons = Array.from(document.getElementsByClassName('service__button'));
-    service_buttons.forEach(element=> {
-        element.addEventListener('click', ()=>{
-            let service_cards = Array.from(document.getElementsByClassName('service__card'));
-            service_cards.forEach(card => {
-                card.classList.remove("blur");
-
-                let btnId = element.getAttribute('id');
-
-                if (card.classList.contains(btnId)){
-                    card.classList.add("blur");
-                }
-            });     
-        });
-    });
-
     let price_list_items = Array.from(document.getElementsByClassName('price__list-item-header-btn'));
     price_list_items.forEach(item =>{
         item.addEventListener('click', ()=> {
@@ -154,6 +138,55 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        document.querySelectorAll(".service__button").forEach(button => {
+            button.addEventListener('click', ()=> {
+
+                if (button.classList.contains("service__button__disabled")) return;
+                
+                var isActive = false;               
+                if(button.classList.contains('service__button__active')){
+                    isActive = false;
+                    button.classList.remove('service__button__active');
+                }
+                else{
+                    isActive = true;
+                    button.classList.add('service__button__active');
+                }
+
+                var active_buttons_ids = Array.from(document.querySelectorAll(".service__button__active")).map(element => element.id);
+                if (active_buttons_ids.length >= 2){
+                    document.querySelectorAll(".service__button").forEach(b=>{
+                        if (!b.classList.contains("service__button__active")){
+                            b.classList.add("service__button__disabled");
+                        }
+                    });
+
+                }else{
+                    document.querySelectorAll(".service__button").forEach(b=>{
+                        if (b.classList.contains("service__button__disabled")){
+                            b.classList.remove("service__button__disabled");
+                        }
+                    });
+                }
+
+                document.querySelectorAll(".service__card").forEach(card => {
+
+                    if (active_buttons_ids.length == 0){
+                        card.classList.remove("blur");
+                        return;
+                    }
+
+                    card.classList.add("blur");
+
+                    if (Array.from(card.classList).some(c=> active_buttons_ids.includes(c))){
+                        card.classList.remove("blur");
+                    }
+                });
+            });
+        });
+
+        // var active_buttons_count = document.querySelectorAll(".service__button__active").length;
+        //             if (active_buttons_count >= 2) return;
     }());
 
 
