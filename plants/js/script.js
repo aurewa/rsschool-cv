@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         content_item.classList.add("hidden");
                     }
                 }
+                else {
+                    content_item.classList.add("hidden");
+                }
             });
         });
     });
@@ -83,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showCard(elementIndex){
-
        var cards = Array.from(document.getElementsByClassName("city__card"));
        cards.forEach(card => {
             if (card.classList.contains(elementIndex)){
@@ -184,9 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
-
-        // var active_buttons_count = document.querySelectorAll(".service__button__active").length;
-        //             if (active_buttons_count >= 2) return;
     }());
 
 
