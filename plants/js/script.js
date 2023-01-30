@@ -1,27 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    let price_list_items = Array.from(document.getElementsByClassName('price__list-item-header-btn'));
-    price_list_items.forEach(item =>{
-        item.addEventListener('click', ()=> {
-            let price_list_items_content = Array.from(document.getElementsByClassName('price__list-item-content'));
-            price_list_items_content.forEach(content_item => {
-
-                let btnId = item.getAttribute('id');
-
-                if (content_item.classList.contains(btnId)){
-                    if (content_item.classList.contains("hidden")){
-                        content_item.classList.remove("hidden");
-                    }else{
-                        content_item.classList.add("hidden");
-                    }
-                }
-                else {
-                    content_item.classList.add("hidden");
-                }
-            });
-        });
-    });
-
     var custom_select_elements, i, j, custom_select_elements_count, current_select_element_items_count, current_select_element, options_div_tmp, select_options_div, option_tmp;
 
     custom_select_elements = document.getElementsByClassName("custom-select");
@@ -186,6 +164,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+
+        document.querySelectorAll('.price__list-item-header-btn').forEach(item => {
+            item.addEventListener('click', ()=> {
+
+                let buttons = Array.from(document.querySelectorAll(".price__list-item-header-btn"));
+                let pressed_button_id = item.getAttribute('id');
+                buttons.forEach(expand_button=>{
+    
+                    let current_button_id = expand_button.getAttribute('id');
+                    let parent = expand_button.closest(".price__list-item");
+                    let content_item = parent.querySelector(".price__list-item-content");
+                    
+    
+                    if (current_button_id != pressed_button_id || (current_button_id == pressed_button_id && !content_item.classList.contains("hidden")))
+                    {
+                        content_item.classList.add("hidden");
+                        expand_button.classList.remove("price__list-item-header-btn__expanded");
+                        parent.classList.remove("price__list-item__expanded");
+    
+                    }else{
+                        content_item.classList.remove("hidden");
+                        parent.classList.add("price__list-item__expanded");
+                        expand_button.classList.add("price__list-item-header-btn__expanded");
+                    }
+                });    
+            });
+        });
+
     }());
 
 
