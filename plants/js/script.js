@@ -58,16 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
       options_div_tmp.addEventListener("click", function(e) {
           e.stopPropagation();
           closeAllSelect(this);
+
           this.nextSibling.classList.toggle("select-hide");
           this.classList.toggle("select-arrow-active");
+          
+          document.querySelector(".custom-select").classList.toggle("custom-select-expanded");
         });
     }
 
     function showCard(elementIndex){
        var cards = Array.from(document.getElementsByClassName("city__card"));
+       var select = document.querySelector(".custom-select");
+
        cards.forEach(card => {
             if (card.classList.contains(elementIndex)){
                 card.classList.remove("hidden");
+                if (!select.classList.contains("custom-select-selected")){
+                    select.classList.add("custom-select-selected")
+                }
             }else{
                 if (!card.classList.contains("hidden")){
                     card.classList.add("hidden");
@@ -89,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             arrNo.push(i)
           } else {
             y[i].classList.remove("select-arrow-active");
+            y[i].closest(".custom-select").classList.remove("custom-select-expanded");
           }
         }
         for (i = 0; i < xl; i++) {
@@ -192,14 +201,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        document.querySelectorAll(".call__us-button").forEach(call_button => {
+            call_button.addEventListener('click', ()=>{
+                var card = call_button.closest(".city__card");
+                var phone = card.querySelector(".phone").innerHTML.replaceAll("&nbsp;", "");
+                window.open(`tel:${phone}`);
+            });
+        });
+
     }());
 
 
-    const part1 = "1.Вёрстка соответствует макету. Ширина экрана 768px +24 \n";
-    const part2 = "2.Вёрстка соответствует макету. Ширина экрана 380px +24 \n";
-    const part3 = "3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15 \n";
-    const part4 = "4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22.  (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)  \n";
-    const part5 = "Оценка за задание 75 баллов  \n";
+    const part1 = "1.При нажатии на кнопки: Gargens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50 \n";
+    const part2 = "2.Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50 \n";
+    const part3 = "3.В разделе contacts реализован select с выбором городов +25 \n";
+    
+    const part4 = "Оценка за задание 125 баллов  \n";
 
-    console.log(part1 + part2 + part3 + part4 + part5);
+    console.log(part1 + part2 + part3 + part4);
 });
