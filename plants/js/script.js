@@ -1,40 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    let service_buttons = Array.from(document.getElementsByClassName('service__button'));
-    service_buttons.forEach(element=> {
-        element.addEventListener('click', ()=>{
-            let service_cards = Array.from(document.getElementsByClassName('service__card'));
-            service_cards.forEach(card => {
-                card.classList.remove("blur");
-
-                let btnId = element.getAttribute('id');
-
-                if (card.classList.contains(btnId)){
-                    card.classList.add("blur");
-                }
-            });     
-        });
-    });
-
-    let price_list_items = Array.from(document.getElementsByClassName('price__list-item-header-btn'));
-    price_list_items.forEach(item =>{
-        item.addEventListener('click', ()=> {
-            let price_list_items_content = Array.from(document.getElementsByClassName('price__list-item-content'));
-            price_list_items_content.forEach(content_item => {
-
-                let btnId = item.getAttribute('id');
-
-                if (content_item.classList.contains(btnId)){
-                    if (content_item.classList.contains("hidden")){
-                        content_item.classList.remove("hidden");
-                    }else{
-                        content_item.classList.add("hidden");
-                    }
-                }
-            });
-        });
-    });
-
     var custom_select_elements, i, j, custom_select_elements_count, current_select_element_items_count, current_select_element, options_div_tmp, select_options_div, option_tmp;
 
     custom_select_elements = document.getElementsByClassName("custom-select");
@@ -93,17 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
       options_div_tmp.addEventListener("click", function(e) {
           e.stopPropagation();
           closeAllSelect(this);
+
           this.nextSibling.classList.toggle("select-hide");
           this.classList.toggle("select-arrow-active");
+          
+          document.querySelector(".custom-select").classList.toggle("custom-select-expanded");
         });
     }
 
     function showCard(elementIndex){
-
        var cards = Array.from(document.getElementsByClassName("city__card"));
+       var select = document.querySelector(".custom-select");
+
        cards.forEach(card => {
             if (card.classList.contains(elementIndex)){
                 card.classList.remove("hidden");
+                if (!select.classList.contains("custom-select-selected")){
+                    select.classList.add("custom-select-selected")
+                }
             }else{
                 if (!card.classList.contains("hidden")){
                     card.classList.add("hidden");
@@ -125,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             arrNo.push(i)
           } else {
             y[i].classList.remove("select-arrow-active");
+            y[i].closest(".custom-select").classList.remove("custom-select-expanded");
           }
         }
         for (i = 0; i < xl; i++) {
@@ -154,14 +127,96 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        document.querySelectorAll(".service__button").forEach(button => {
+            button.addEventListener('click', ()=> {
+
+                if (button.classList.contains("service__button__disabled")) return;
+                
+                var isActive = false;               
+                if(button.classList.contains('service__button__active')){
+                    isActive = false;
+                    button.classList.remove('service__button__active');
+                }
+                else{
+                    isActive = true;
+                    button.classList.add('service__button__active');
+                }
+
+                var active_buttons_ids = Array.from(document.querySelectorAll(".service__button__active")).map(element => element.id);
+                if (active_buttons_ids.length >= 2){
+                    document.querySelectorAll(".service__button").forEach(b=>{
+                        if (!b.classList.contains("service__button__active")){
+                            b.classList.add("service__button__disabled");
+                        }
+                    });
+
+                }else{
+                    document.querySelectorAll(".service__button").forEach(b=>{
+                        if (b.classList.contains("service__button__disabled")){
+                            b.classList.remove("service__button__disabled");
+                        }
+                    });
+                }
+
+                document.querySelectorAll(".service__card").forEach(card => {
+
+                    if (active_buttons_ids.length == 0){
+                        card.classList.remove("blur");
+                        return;
+                    }
+
+                    card.classList.add("blur");
+
+                    if (Array.from(card.classList).some(c=> active_buttons_ids.includes(c))){
+                        card.classList.remove("blur");
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.price__list-item-header-btn').forEach(item => {
+            item.addEventListener('click', ()=> {
+
+                let buttons = Array.from(document.querySelectorAll(".price__list-item-header-btn"));
+                let pressed_button_id = item.getAttribute('id');
+                buttons.forEach(expand_button=>{
+    
+                    let current_button_id = expand_button.getAttribute('id');
+                    let parent = expand_button.closest(".price__list-item");
+                    let content_item = parent.querySelector(".price__list-item-content");
+                    
+    
+                    if (current_button_id != pressed_button_id || (current_button_id == pressed_button_id && !content_item.classList.contains("hidden")))
+                    {
+                        content_item.classList.add("hidden");
+                        expand_button.classList.remove("price__list-item-header-btn__expanded");
+                        parent.classList.remove("price__list-item__expanded");
+    
+                    }else{
+                        content_item.classList.remove("hidden");
+                        parent.classList.add("price__list-item__expanded");
+                        expand_button.classList.add("price__list-item-header-btn__expanded");
+                    }
+                });    
+            });
+        });
+
+        document.querySelectorAll(".call__us-button").forEach(call_button => {
+            call_button.addEventListener('click', ()=>{
+                var card = call_button.closest(".city__card");
+                var phone = card.querySelector(".phone").innerHTML.replaceAll("&nbsp;", "");
+                window.open(`tel:${phone}`);
+            });
+        });
+
     }());
 
 
-    const part1 = "1.Вёрстка соответствует макету. Ширина экрана 768px +24 \n";
-    const part2 = "2.Вёрстка соответствует макету. Ширина экрана 380px +24 \n";
-    const part3 = "3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15 \n";
-    const part4 = "4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22.  (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)  \n";
-    const part5 = "Оценка за задание 75 баллов  \n";
+    const part1 = "1.При нажатии на кнопки: Gargens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50 \n";
+    const part2 = "2.Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50 \n";
+    const part3 = "3.В разделе contacts реализован select с выбором городов +25 \n";
+    
+    const part4 = "Оценка за задание 125 баллов  \n";
 
-    console.log(part1 + part2 + part3 + part4 + part5);
+    console.log(part1 + part2 + part3 + part4);
 });
