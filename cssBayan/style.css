@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100hv;
+
+    background-color: #F6F6ED;
+    color: #000;
+
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page__header{
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.bayan_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bayan_list:hover{
+    color: black;
+}
+
+.bayan__list__element{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    list-style: none;
+    border-top: 1px solid #B5B5B5;
+
+    padding: 15px 0;
+    cursor: pointer;
+
+    color: blue;
+    text-decoration: none;
+}
+
+.meme__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image__container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.meme__image{
+   
+    width: 0;
+    height: 0;
+    background-size: 0;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 1px solid grey;
+
+    outline: 0;
+    opacity: 0;
+    transition: .7s;  
+}
+
+.bayan__list__element:hover{
+    color: black;
+}
+
+.bayan__list__element:hover .meme__image{
+    width: 350px;
+    height: 350px;
+    background-size: 350px 350px;
+    opacity: 1;
+}
+
+.bayan__list__element:focus{
+    color: black;
+}
+
+.bayan__list__element:focus .meme__image{
+    width: 350px;
+    height: 350px;
+    background-size: 350px 350px;
+    opacity: 1;
+}
