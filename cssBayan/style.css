@@ -65,6 +65,10 @@ label {
     cursor: pointer;
 }
 
+.meme__element label:active .meme__image{
+    opacity: 0.7;
+}
+
 .meme__element label:active{
     color: blue;
 }
