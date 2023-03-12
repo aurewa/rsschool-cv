@@ -61,19 +61,19 @@ label {
     font-size: var(--meme-laber-font-size);
 }
 
-.l1 label{
+.meme__element label{
     cursor: pointer;
 }
 
-.l1 label:active{
+.meme__element label:active{
     color: blue;
 }
 
-.l1 input:checked ~ label{
+.meme__element input:checked ~ label{
     color:#000;
 }
 
-.l1 input:checked ~ label .meme__image{
+.meme__element input:checked ~ label .meme__image{
     width: var(--meme-image-width);
     height: var(--meme-image-height);
     background-size: var(--meme-image-width) var(--meme-image-height);
@@ -81,7 +81,7 @@ label {
     margin-bottom: 2rem;
 }
 
-.c1{
+.meme__element__header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -98,7 +98,7 @@ label {
     caret-color: transparent;
 }
 
-.c2{
+.meme__image__wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,7 +122,7 @@ label {
     object-fit: cover;
 
     outline: 0;
-    transition: .7s;
+    transition: width 0.7s, height 0.7s;
 }
 
 .meme__control__image{
@@ -137,11 +137,11 @@ label {
     border: none;
 
     outline: 0;
-    transition: .7s;
+    transition: width 0.7s, height 0.7s;
     object-fit: cover;
 }
 
-.l1:hover .meme__image{
+.meme__element:hover .meme__image{
     width: var(--meme-image-width);
     height: var(--meme-image-height);
     background-size: var(--meme-image-width) var(--meme-image-height);
@@ -149,11 +149,11 @@ label {
     margin-bottom: 2rem;
 }
 
-.c11{
+.meme__icons__container{
     display: none;
 }
 
-.bayan_list:hover .c11{
+.bayan_list:hover .meme__icons__container{
     display: block;
 }
 
@@ -161,11 +161,11 @@ label {
     display: none;
 }
 
-.l1 input:checked ~ label .close__image{
+.meme__element input:checked ~ label .close__image{
     display: block;
 }
 
-.l1 input:checked ~ label .plus__image{
+.meme__element input:checked ~ label .plus__image{
     display: none;
 }
 
@@ -173,11 +173,11 @@ label {
     display: block;
 }
 
-.l1:hover .plus__image{
+.meme__element:hover .plus__image{
     display: none;
 }
 
-.l1:hover .close__image{
+.meme__element:hover .close__image{
     display: block;
 }
 
