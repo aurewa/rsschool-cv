@@ -53,10 +53,6 @@ body {
     display: none;
 }
 
-.bayan_list:hover{
-    color: #000;
-}
-
 label {
     font-size: var(--meme-laber-font-size);
 }
@@ -145,44 +141,58 @@ label {
     object-fit: cover;
 }
 
-.meme__element:hover .meme__image{
-    width: var(--meme-image-width);
-    height: var(--meme-image-height);
-    background-size: var(--meme-image-width) var(--meme-image-height);
-    opacity: 1;
-    margin-bottom: 2rem;
-}
-
-.meme__icons__container{
-    display: none;
-}
-
-.bayan_list:hover .meme__icons__container{
-    display: block;
-}
-
 .meme__control__image{
     display: none;
 }
 
-.meme__element input:checked ~ label .close__image{
-    display: block;
-}
 
-.meme__element input:checked ~ label .plus__image{
-    display: none;
-}
+/*
+    Cursor over the memes (hover) effect only exists for devices that can support hover
+*/
 
-.bayan_list:hover .plus__image{
-    display: block;
-}
+@media (hover: hover) {
 
-.meme__element:hover .plus__image{
-    display: none;
-}
+    .bayan_list:hover{
+        color: #000;
+    }
+    
+    .meme__element:hover .meme__image{
+        width: var(--meme-image-width);
+        height: var(--meme-image-height);
+        background-size: var(--meme-image-width) var(--meme-image-height);
+        opacity: 1;
+        margin-bottom: 2rem;
+    }
 
-.meme__element:hover .close__image{
-    display: block;
+    .meme__icons__container{
+        display: none;
+    }
+    
+    .bayan_list:hover .meme__icons__container{
+        display: block;
+    }
+
+    .meme__element input:checked ~ label .close__image{
+        display: block;
+    }
+    
+    .meme__element input:checked ~ label .plus__image{
+        display: none;
+    }
+    
+    .bayan_list:hover .plus__image{
+        display: block;
+    }
+    
+    .meme__element:hover .plus__image{
+        display: none;
+    }
+    
+    .meme__element:hover .close__image{
+        display: block;
+    }
+    
+
 }
 
 /* 
